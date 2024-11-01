@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: 
+
+resources:
+- ../../base
+
+patches:
+- path: ./deployment-patch.yaml
+  target:
+    kind: Deployment
+- path: ./ingress-patch.yaml
+  target:
+    kind: Ingress
+
+images:
+- name: ktdsidpdemo.azurecr.io/k8s-spring-project
+  newName: ktdsidpdemo.azurecr.io/k8s-spring-project
+  newTag: 1.0.0
+

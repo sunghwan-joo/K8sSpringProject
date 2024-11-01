@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: K8sSpringProject
+  description: K8sSpringProject
+  annotations:
+    github.com/project-slug: sunghwan-joo/K8sSpringProject
+    backstage.io/kubernetes-id: K8sSpringProject
+    argocd/proxy-url: '/argocd/api'
+    argocd/app-name: k8s-spring-project
+    jira/project-key: 'KAN'
+    azure-container-registry/repository-name: k8s-spring-project
+    backstage.io/techdocs-ref: dir:.
+    
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/platform_coe_team
